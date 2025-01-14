@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan untuk Dosen Tercinta</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times Roman', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow: hidden;
+            position: relative;
+        }
+        nav {
+            background: linear-gradient(90deg, #ff7eb3, #ff758f);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav h1 {
+            font-size: 1.5em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffe4e1;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero {
+            background: url(senja.jpg!w700wp) no-repeat center center/cover;
+            height: 80vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            background: #ff758f;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .hero button:hover {
+            background: #ff4c68;
+        }
+        .message {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .message::before, .message::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #ff7eb3, transparent);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: move 8s infinite;
+        }
+        .message::after {
+            background: radial-gradient(circle, #ff758f, transparent);
+            animation-duration: 10s;
+        }
+        @keyframes move {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(50%, 50%) scale(1.5);
+            }
+        }
+        .decor {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .decor span {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff7eb3, #ff758f);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .decor span:nth-child(odd) {
+            animation-delay: 2s;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px) rotate(15deg);
+            }
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px 10px;
+            background: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .photo-gallery .main-photo {
+            max-width: 300px;
+            max-height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .photo-gallery .main-photo:hover {
+            transform: scale(1.1);
+        }
+        .photo-gallery .other-photos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .photo-gallery .other-photos img {
+            max-width: 200px;
+            max-height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .photo-gallery .other-photos img:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Pesan Tercinta</h1>
+        <ul>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#message">Pesan</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#contact">Lagu</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <h1>Terima Kasih, Dosen Tercinta</h1>
+        <p>Pengalaman belajar bersama Bu Rini tidak akan pernah saya lupakan.</p>
+        <button onclick="document.getElementById('message').scrollIntoView()">Baca Pesan Saya</button>
+    </section>
+
+    <section id="message">
+        <div class="message">
+            <h2>Pesan dari Rio Ardian</h2>
+            <p>
+                Kepada Yth. Bu Rini,<br><br>
+                Saya sangat berterima kasih atas dedikasi dan bimbingan yang diberikan selama semester ini. 
+                Saya belajar banyak, tidak hanya dari materi pelajaran, tetapi juga dari teladan Ibu.
+            </p>
+            <p>
+                Meski perpisahan ini hanya sementara, saya akan selalu mengenang momen-momen berharga 
+                bersama Ibu. Semoga kita dapat bertemu lagi di kesempatan yang akan datang.
+            </p>
+            <div class="decor">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeri Foto</h2>
+        <div class="photo-gallery">
+            <img class="main-photo" src="foto saya.jpeg" alt="Foto Saya">
+            <div class="other-photos">
+                <img src="foto_1.jpeg" alt="Foto Ulang Tahun Ibu">
+                <img src="foto 2.jpeg" alt="Foto Lainnya">
+                <img src="foto 3.jpeg" alt="Foto Lainnya">
+                <img src="foto 4.jpeg" alt="Foto Lainnya">
+                <img src="foto 5.jpeg" alt="Foto Lainnya">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Salam hangat,</p>
+        <p>Rio Ardian</p>
+        <audio controls>
+            <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </footer>
+
+</body>
+</html>
